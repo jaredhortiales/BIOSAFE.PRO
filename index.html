@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BIOSAFE PRO | Bioseguridad y Esterilización Profesional</title>
+  <meta name="description" content="BIOSAFE PRO: bioseguridad, desinfección y esterilización profesional para herramientas y equipos reutilizables. Atención en Tijuana." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BIOSAFE PRO" />
+  <meta property="og:description" content="Bioseguridad y Esterilización Profesional. Atención en Tijuana." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      /* Paleta basada en el logo (azul-marino + turquesa) */
+      --bg: #071827;
+      --surface: rgba(255,255,255,.06);
+      --surface-2: rgba(255,255,255,.10);
+      --text: #eaf2ff;
+      --muted: rgba(234,242,255,.78);
+      --line: rgba(255,255,255,.14);
+
+      --primary: #12c7d8;   /* turquesa */
+      --primary-2: #0aa3c2; /* turquesa profundo */
+      --accent: #0b4c7a;    /* azul */
+      --accent-2: #083257;  /* azul profundo */
+
+      --shadow: 0 16px 45px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius-sm: 14px;
+      --max: 1120px;
+
+      --whatsapp: #25D366;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 520px at 20% -10%, rgba(18,199,216,.22), transparent 55%),
+        radial-gradient(1100px 520px at 110% 10%, rgba(11,76,122,.22), transparent 55%),
+        linear-gradient(180deg, #071827 0%, #061423 60%, #050f1b 100%);
+      letter-spacing: .2px;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    .container{ width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size: 14px;
+      backdrop-filter: blur(8px);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      box-shadow: 0 0 0 6px rgba(18,199,216,.12);
+    }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5,15,27,.62);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      backdrop-filter: blur(10px);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+    }
+    .brand img{
+      height: 42px;
+      width:auto;
+      display:block;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
+    }
+    .brand .name{
+      display:flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+    .brand .name strong{ font-size: 14px; letter-spacing:.8px; }
+    .brand .name span{ font-size: 12px; color: var(--muted); }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap: 18px;
+      padding:0;
+      margin:0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a{
+      font-size: 14px;
+      color: var(--muted);
+      padding: 10px 10px;
+      border-radius: 10px;
+      transition: .2s ease;
+    }
+    nav a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+    }
+
+    .nav-cta{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      justify-content: flex-end;
+      min-width: 240px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 650;
+      font-size: 14px;
+      cursor: pointer;
+      transition: .2s ease;
+      user-select:none;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(18,199,216,.35); }
+    .btn.primary{
+      border-color: rgba(18,199,216,.35);
+      background: linear-gradient(135deg, rgba(18,199,216,.20) 0%, rgba(11,76,122,.18) 100%);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 56px 0 22px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+    .hero h1{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 3.2vw, 46px);
+      letter-spacing: .2px;
+      line-height: 1.06;
+    }
+    .hero p{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 60ch;
+    }
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .card{
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.04) 100%);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card .inner{ padding: 20px; }
+    .card h3{ margin: 0 0 8px; font-size: 16px; letter-spacing:.3px; }
+    .card p{ margin: 0; color: var(--muted); line-height: 1.55; font-size: 14px; }
+
+    .stats{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .stat{
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .stat strong{ display:block; font-size: 18px; }
+    .stat span{ color: var(--muted); font-size: 13px; }
+
+    /* Sections */
+    section{ padding: 34px 0; }
+    .section-title{
+      display:flex;
+      align-items:end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+    .section-title h2{
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: .2px;
+    }
+    .section-title p{
+      margin:0;
+      color: var(--muted);
+      max-width: 70ch;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .feature{
+      padding: 18px;
+    }
+    .icon{
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(135deg, rgba(18,199,216,.20) 0%, rgba(11,76,122,.18) 100%);
+      border: 1px solid rgba(18,199,216,.22);
+      margin-bottom: 12px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+    }
+    .icon svg{ width: 20px; height: 20px; opacity: .95; }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .kv{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .kv .row{
+      display:flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+    }
+    .kv .row b{ width: 110px; color: var(--text); font-size: 13px; }
+    .kv .row span{ color: var(--muted); font-size: 13px; line-height: 1.45; }
+
+    .mini-actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .map{
+      min-height: 280px;
+      display:flex;
+      flex-direction: column;
+    }
+    .map .inner{ padding: 0; }
+    .map iframe{
+      border: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      display:block;
+      filter: saturate(1.02) contrast(1.02);
+    }
+
+    footer{
+      padding: 22px 0 34px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .foot{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* WhatsApp Floating Button */
+    .wa-float{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      background: rgba(37, 211, 102, .14);
+      border: 1px solid rgba(37, 211, 102, .35);
+      box-shadow: 0 16px 40px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+      transition: .2s ease;
+    }
+    .wa-float:hover{ transform: translateY(-2px); }
+    .wa-float .bubble{
+      width: 40px; height: 40px;
+      border-radius: 999px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(37, 211, 102, .20);
+      border: 1px solid rgba(37, 211, 102, .45);
+    }
+    .wa-float span{
+      font-weight: 700;
+      letter-spacing: .2px;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .wa-float small{
+      display:block;
+      color: rgba(234,242,255,.78);
+      font-weight: 500;
+      margin-top: 1px;
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .nav{ flex-wrap: wrap; }
+      .nav-cta{ min-width: unset; width: 100%; justify-content: flex-start; }
+      nav ul{ justify-content: flex-start; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <!-- Logo: sube el archivo como biosafe-pro-logo.png -->
+          <img src="biosafe-pro-logo.png" alt="Logo BIOSAFE PRO" />
+          <div class="name">
+            <strong>BIOSAFE PRO</strong>
+            <span>Bioseguridad y Esterilización Profesional</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn primary" id="btnWhatsTop" target="_blank" rel="noopener">
+            Contactar por WhatsApp
+          </a>
+          <a class="btn" href="tel:+526644979797" title="Llamar">
+            Llamar
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="pill"><span class="dot"></span> Servicio especializado en higiene y bioseguridad</div>
+            <h1>Protegemos tu práctica con protocolos de desinfección y esterilización confiables.</h1>
+            <p>
+              En BIOSAFE PRO brindamos un servicio enfocado en la bioseguridad, orientado a la
+              desinfección y esterilización profesional de herramientas y equipos reutilizables,
+              con una ejecución ordenada y estándares claros para apoyar a negocios que requieren higiene estricta.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#contacto">Agendar o solicitar información</a>
+              <a class="btn" href="#servicios">Ver servicios</a>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <strong>Atención local</strong>
+                <span>Tijuana, Baja California</span>
+              </div>
+              <div class="stat">
+                <strong>Horario</strong>
+                <span>L–V 9:00–18:00 | Sáb 9:00–12:00</span>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card">
+            <div class="inner">
+              <h3>Información rápida</h3>
+              <p>
+                Te atendemos por WhatsApp o llamada. Si deseas, también puedes visitarnos en Plaza Las Ferias.
+              </p>
+
+              <div class="kv">
+                <div class="row">
+                  <b>WhatsApp</b>
+                  <span>+52 664 497 9797</span>
+                </div>
+                <div class="row">
+                  <b>Dirección</b>
+                  <span>
+                    Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630,
+                    Colonia Lomas Hipódromo.
+                  </span>
+                </div>
+                <div class="row">
+                  <b>Horario</b>
+                  <span>
+                    Lunes a viernes: 9:00 a 18:00<br />
+                    Sábado: 9:00 a 12:00
+                  </span>
+                </div>
+              </div>
+
+              <div class="mini-actions">
+                <a class="btn primary" id="btnWhatsCard" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn" id="btnMaps" target="_blank" rel="noopener">Abrir en Maps</a>
+                <a class="btn" href="tel:+526644979797">Llamar</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-title">
+          <h2>Servicios</h2>
+          <p>
+            Un esquema de atención diseñado para reducir riesgos asociados a herramientas reutilizables,
+            priorizando limpieza, desinfección y esterilización con un enfoque práctico y profesional.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M6 12h12M12 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Esterilización profesional</h3>
+            <p>
+              Procesos orientados a disminuir la carga biológica en instrumentos reutilizables,
+              de acuerdo con prácticas ampliamente aceptadas en control de infecciones.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 17l10-10M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Desinfección y control higiénico</h3>
+            <p>
+              Preparación y tratamiento de superficies e instrumentos con criterios de limpieza previos,
+              reduciendo riesgos de contaminación cruzada en el entorno de trabajo.
+            </p>
+          </article>
+
+          <article class="card feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 3l7 4v10l-7 4-7-4V7l7-4z" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <h3>Gestión operativa y trazabilidad</h3>
+            <p>
+              Organización del servicio para mantener orden, control y consistencia del proceso,
+              facilitando la gestión y la confianza del cliente final.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="container">
+        <div class="section-title">
+          <h2>Proceso de atención</h2>
+          <p>
+            Flujo simple y claro: recibimos, tratamos y devolvemos el material listo para uso,
+            con comunicación directa y tiempos acordados.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature">
+            <div class="inner">
+              <h3>1) Recepción</h3>
+              <p>Coordinamos por WhatsApp, validamos el tipo de material y acordamos la entrega/recepción.</p>
+            </div>
+          </article>
+
+          <article class="card feature">
+            <div class="inner">
+              <h3>2) Tratamiento</h3>
+              <p>Aplicamos el protocolo correspondiente, priorizando higiene, control y consistencia del proceso.</p>
+            </div>
+          </article>
+
+          <article class="card feature">
+            <div class="inner">
+              <h3>3) Entrega</h3>
+              <p>Entregamos el material listo para su uso, manteniendo una comunicación clara sobre el servicio.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contacto</h2>
+          <p>
+            Podemos atenderte por WhatsApp, llamada o visita. Si requieres indicaciones, abre la ubicación en Maps.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card">
+            <div class="inner">
+              <h3>Datos de atención</h3>
+              <div class="kv">
+                <div class="row">
+                  <b>WhatsApp</b>
+                  <span><a href="tel:+526644979797">+52 664 497 9797</a></span>
+                </div>
+                <div class="row">
+                  <b>Dirección</b>
+                  <span>
+                    Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630,
+                    Colonia Lomas Hipódromo.
+                  </span>
+                </div>
+                <div class="row">
+                  <b>Horario</b>
+                  <span>
+                    Lunes a viernes: 9:00 a 18:00<br />
+                    Sábado: 9:00 a 12:00
+                  </span>
+                </div>
+              </div>
+
+              <div class="mini-actions">
+                <a class="btn primary" id="btnWhatsContact" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+                <a class="btn" href="tel:+526644979797">Llamar</a>
+                <a class="btn" id="btnMaps2" target="_blank" rel="noopener">Cómo llegar</a>
+              </div>
+
+              <p style="margin-top:14px; color: var(--muted); font-size: 13px; line-height: 1.55;">
+                Nota: Si deseas, puedo adaptarte esta misma web a una estructura con secciones adicionales
+                (paquetes, preguntas frecuentes, testimonios) sin perder el diseño limpio.
+              </p>
+            </div>
+          </div>
+
+          <div class="card map" aria-label="Mapa">
+            <div class="inner">
+              <!-- Mapa embebido con búsqueda de la dirección (sin depender de coordenadas) -->
+              <iframe
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Local%20%2314%20Centro%20Comercial%20Plaza%20Las%20Ferias,%20avenida%20de%20Las%20Ferias%205630,%20Colonia%20Lomas%20Hip%C3%B3dromo&output=embed"
+                title="Ubicación BIOSAFE PRO">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="foot">
+          <div>© <span id="year"></span> BIOSAFE PRO. Todos los derechos reservados.</div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#inicio" class="pill"><span class="dot"></span> Volver arriba</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Botón flotante WhatsApp -->
+  <a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp BIOSAFE PRO">
+    <div class="bubble" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M20.5 3.5A11 11 0 0 0 2.7 16.8L2 22l5.4-1.4A11 11 0 1 0 20.5 3.5Zm-9.5 18a9 9 0 0 1-4.6-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A9 9 0 1 1 11 21.5Zm5.2-6.7c-.3-.2-1.7-.8-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.3 8.3 0 0 1-1.5-2c-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6 0 1.5 1.1 3 1.2 3.2.2.2 2.2 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.1-1.4-.1-.2-.3-.2-.6-.4Z"/>
+      </svg>
+    </div>
+    <div>
+      <span>WhatsApp</span>
+      <small>+52 664 497 9797</small>
+    </div>
+  </a>
+
+  <script>
+    (function () {
+      const phoneInternational = "526644979797"; // +52 664 497 9797
+      const defaultMsg = "Hola, me gustaría recibir información sobre los servicios de BIOSAFE PRO.";
+      const waLink = "https://wa.me/" + phoneInternational + "?text=" + encodeURIComponent(defaultMsg);
+
+      // Set WhatsApp links
+      const ids = ["btnWhatsTop", "btnWhatsCard", "btnWhatsContact", "waFloat"];
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = waLink;
+      });
+
+      // Maps links
+      const addressQuery = "Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630, Colonia Lomas Hipódromo";
+      const mapsLink = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(addressQuery);
+      const mapsIds = ["btnMaps", "btnMaps2"];
+      mapsIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = mapsLink;
+      });
+
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
