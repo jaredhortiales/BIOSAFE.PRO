@@ -3,102 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BIOSAFE PRO | Bioseguridad de Grado Hospitalario</title>
+  <title>BIOSAFE PRO | Bioseguridad y Esterilización Instrumental</title>
 
-  <meta name="description" content="BIOSAFE PRO: esterilización instrumental con bioseguridad de grado hospitalario y trazabilidad digital verificable para la industria estética en Tijuana." />
-  <meta name="theme-color" content="#0B5C6B" />
-  <meta name="color-scheme" content="dark light" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="BIOSAFE PRO" />
-  <meta property="og:description" content="Bioseguridad de grado hospitalario + trazabilidad digital verificable. Tijuana, BC." />
-  <meta property="og:type" content="website" />
-
-  <!-- JSON-LD (ajusta lo que gustes) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"BIOSAFE PRO",
-    "description":"Esterilización instrumental y bioseguridad de grado hospitalario con trazabilidad digital verificable para profesionales de la estética y el bienestar.",
-    "telephone":"+52 664 497 9797",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630, Colonia Lomas Hipódromo",
-      "addressLocality":"Tijuana",
-      "addressRegion":"BC",
-      "addressCountry":"MX"
-    }
-  }
-  </script>
+  <meta name="description" content="BIOSAFE PRO: esterilización instrumental con bioseguridad de grado hospitalario y trazabilidad digital verificable. Planes mensuales y servicio express en Tijuana." />
+  <meta name="theme-color" content="#0a6f7b" />
+  <meta name="color-scheme" content="dark" />
 
   <style>
     :root{
-      /* Paleta (alineada al look turquesa/agua + placas negras del arte) */
-      --bg0: #062029;     /* base profunda */
-      --bg1: #08323C;     /* azul/verde oscuro */
-      --aqua0: #6FE0EA;   /* acento */
-      --aqua1: #39C2CF;   /* acento */
-      --aqua2: #129FB2;   /* acento */
-      --ink: #071015;     /* negro azulado para pills */
-      --text: #F2FBFF;
-      --muted: rgba(242,251,255,.76);
+      /* Paleta alineada a tu arte (teal + negro + blanco) */
+      --bg0:#04141a;
+      --bg1:#061b22;
+      --surface: rgba(255,255,255,.06);
+      --surface2: rgba(255,255,255,.09);
       --line: rgba(255,255,255,.14);
-      --glass: rgba(255,255,255,.08);
-      --glass2: rgba(255,255,255,.12);
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
-      --radius: 22px;
-      --radius-sm: 16px;
 
-      --wa: #25D366;
+      --teal:#18c6d2;
+      --teal2:#0aa3ad;
+      --teal3:#0a6f7b;
 
-      --max: 1140px;
+      --ink:#05070a;
+      --text:#ecf6ff;
+      --muted: rgba(236,246,255,.78);
+
+      --good:#25D366;
+
+      --radius: 18px;
+      --radius2: 22px;
+      --shadow: 0 18px 55px rgba(0,0,0,.35);
+      --max: 1160px;
     }
 
     *{ box-sizing: border-box; }
     html, body{ height:100%; }
-    html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
       color: var(--text);
       background:
-        radial-gradient(900px 520px at 10% 5%, rgba(111,224,234,.25), transparent 60%),
-        radial-gradient(900px 520px at 95% 0%, rgba(57,194,207,.18), transparent 58%),
-        linear-gradient(180deg, var(--bg1) 0%, var(--bg0) 62%, #04151B 100%);
+        radial-gradient(1050px 560px at 12% -8%, rgba(24,198,210,.22), transparent 55%),
+        radial-gradient(1050px 560px at 110% 12%, rgba(10,111,123,.22), transparent 55%),
+        linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 70%, #031118 100%);
       letter-spacing: .2px;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    .container{ width:min(var(--max), calc(100% - 48px)); margin:0 auto; }
+    a{ color: inherit; text-decoration: none; }
+    .container{ width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .sr-only{
+      position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+    }
 
-    /* Accesibilidad */
-    .skip{
-      position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
-    }
-    .skip:focus{
-      left:16px; top:16px; width:auto; height:auto; padding:10px 12px;
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.22);
+    :focus-visible{
+      outline: 2px solid rgba(24,198,210,.65);
+      outline-offset: 3px;
       border-radius: 12px;
-      z-index:9999;
-      outline:none;
     }
-    :focus-visible{ outline: 2px solid rgba(111,224,234,.75); outline-offset: 3px; border-radius: 12px; }
 
     /* Header */
     header{
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(4,18,22,.62);
+      z-index: 40;
+      background: rgba(3,13,18,.70);
       border-bottom: 1px solid rgba(255,255,255,.10);
       backdrop-filter: blur(12px);
     }
     .nav{
       display:flex;
       align-items:center;
-      justify-content:space-between;
+      justify-content: space-between;
       gap: 16px;
       padding: 14px 0;
     }
@@ -106,30 +80,26 @@
       display:flex;
       align-items:center;
       gap: 12px;
-      min-width: 230px;
+      min-width: 250px;
     }
     .brand img{
       height: 42px;
       width:auto;
       display:block;
-      filter: drop-shadow(0 10px 22px rgba(0,0,0,.45));
+      filter: drop-shadow(0 10px 22px rgba(0,0,0,.35));
     }
-    .brand .t{
-      display:flex;
-      flex-direction:column;
-      line-height: 1.06;
-    }
-    .brand .t strong{ font-size: 14px; letter-spacing:.9px; }
-    .brand .t span{ font-size: 12px; color: var(--muted); }
+    .brand .txt{ line-height:1.05; }
+    .brand .txt b{ display:block; font-size: 14px; letter-spacing:.9px; }
+    .brand .txt span{ display:block; font-size: 12px; color: var(--muted); margin-top: 3px; }
 
     nav ul{
       list-style:none;
       display:flex;
-      gap: 16px;
+      gap: 18px;
       padding:0;
       margin:0;
       flex-wrap: wrap;
-      justify-content:center;
+      justify-content: center;
     }
     nav a{
       font-size: 14px;
@@ -147,123 +117,108 @@
       display:flex;
       align-items:center;
       gap: 10px;
-      justify-content:flex-end;
+      justify-content: flex-end;
       min-width: 260px;
     }
+
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap: 10px;
+      gap:10px;
       padding: 12px 14px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.16);
+      border: 1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.06);
       color: var(--text);
-      font-weight: 720;
+      font-weight: 750;
       font-size: 14px;
       cursor:pointer;
       transition: .18s ease;
       user-select:none;
-      white-space:nowrap;
+      white-space: nowrap;
     }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(111,224,234,.35); }
-    .btn.primary{
-      border-color: rgba(111,224,234,.35);
-      background: linear-gradient(135deg, rgba(111,224,234,.18) 0%, rgba(18,159,178,.18) 65%, rgba(8,50,60,.12) 100%);
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(24,198,210,.35); }
+    .btn.teal{
+      border-color: rgba(24,198,210,.38);
+      background: linear-gradient(135deg, rgba(24,198,210,.20) 0%, rgba(10,111,123,.18) 100%);
+    }
+    .btn.dark{
+      background: rgba(0,0,0,.28);
+      border-color: rgba(255,255,255,.14);
     }
 
     /* Mobile menu */
-    .menu-btn{
-      display:none;
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight: 720;
-      cursor:pointer;
-    }
-    .menu-panel{
-      display:none;
-      padding: 6px 0 16px;
-    }
-    .menu-panel.open{ display:block; }
-    .menu-panel a{
-      display:block;
-      padding: 12px 12px;
-      border-radius: 12px;
-      color: var(--muted);
-    }
-    .menu-panel a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
+    .menu-btn{ display:none; }
 
-    /* UI blocks */
+    /* Pill */
     .pill{
       display:inline-flex;
       align-items:center;
-      gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid rgba(255,255,255,.18);
+      gap:10px;
+      padding:10px 14px;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      background: rgba(255,255,255,.07);
+      background: rgba(255,255,255,.05);
       color: var(--muted);
       font-size: 14px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(8px);
     }
     .dot{
       width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(135deg, var(--aqua0) 0%, var(--aqua2) 100%);
-      box-shadow: 0 0 0 6px rgba(111,224,234,.12);
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal3) 100%);
+      box-shadow: 0 0 0 6px rgba(24,198,210,.12);
     }
 
-    .card{
-      border: 1px solid rgba(255,255,255,.14);
-      background: linear-gradient(180deg, rgba(255,255,255,.09) 0%, rgba(255,255,255,.06) 100%);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .card .inner{ padding: 22px; }
-
-    section{ padding: 46px 0; }
-    .section-title{
+    /* Sections */
+    section{ padding: 44px 0; }
+    .section-head{
       display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
+      align-items:end;
+      justify-content: space-between;
       gap: 18px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
     }
-    .section-title h2{
-      margin:0;
+    .section-head h2{
+      margin: 0;
       font-size: 24px;
       letter-spacing:.2px;
     }
-    .section-title p{
-      margin:0;
+    .section-head p{
+      margin: 0;
       color: var(--muted);
       max-width: 78ch;
       line-height: 1.55;
-      font-size: 14px;
+      font-size: 14.5px;
     }
 
+    .card{
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.04) 100%);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .card .inner{ padding: 22px; }
+
     /* Hero */
-    .hero{ padding: 56px 0 28px; }
+    .hero{ padding: 56px 0 24px; }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.12fr .88fr;
+      grid-template-columns: 1.1fr .9fr;
       gap: 18px;
       align-items: stretch;
     }
     .hero h1{
       margin: 14px 0 10px;
-      font-size: clamp(30px, 3.4vw, 50px);
+      font-size: clamp(30px, 3.25vw, 50px);
       letter-spacing: .2px;
-      line-height: 1.05;
+      line-height: 1.06;
     }
-    .hero h1 em{
-      font-style: normal;
-      color: rgba(242,251,255,.92);
-      text-shadow: 0 18px 42px rgba(0,0,0,.35);
+    .hero h1 .em{
+      color: var(--teal);
+      text-shadow: 0 12px 35px rgba(24,198,210,.18);
     }
     .hero p{
       margin: 0 0 18px;
@@ -272,7 +227,6 @@
       line-height: 1.65;
       max-width: 66ch;
     }
-
     .hero-actions{
       display:flex;
       gap: 12px;
@@ -280,36 +234,59 @@
       margin-top: 14px;
     }
 
-    .quick .inner{ padding: 22px; }
-    .quick h3{ margin:0 0 10px; font-size: 16px; letter-spacing:.3px; }
-    .quick p{ margin:0 0 14px; color: var(--muted); line-height: 1.55; font-size: 14px; }
+    .quick{
+      position: relative;
+      overflow: hidden;
+    }
+    .quick:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(420px 220px at 40% 10%, rgba(24,198,210,.22), transparent 60%),
+        radial-gradient(420px 220px at 90% 70%, rgba(10,111,123,.22), transparent 60%);
+      pointer-events:none;
+    }
+    .quick .inner{ position:relative; }
+    .quick h3{ margin: 0 0 10px; font-size: 16px; letter-spacing:.2px; }
+    .quick p{ margin: 0 0 14px; color: var(--muted); line-height:1.55; font-size: 14px; }
 
     .kv{
       display:flex;
-      flex-direction:column;
+      flex-direction: column;
       gap: 10px;
       margin-top: 10px;
     }
     .kv .row{
       display:flex;
-      gap: 12px;
-      align-items:flex-start;
+      gap: 10px;
+      align-items: flex-start;
       padding: 12px 12px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
     }
-    .kv .row b{ width: 110px; color: rgba(242,251,255,.92); font-size: 13px; }
-    .kv .row span{ color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .kv .row b{
+      width: 110px;
+      color: var(--text);
+      font-size: 13px;
+      letter-spacing:.2px;
+      flex: 0 0 auto;
+    }
+    .kv .row span{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
 
     .mini-actions{
       display:flex;
       gap: 10px;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
       margin-top: 14px;
     }
 
-    /* Servicios */
+    /* Services grid */
     .grid-3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
@@ -317,187 +294,270 @@
     }
     .feature{
       padding: 20px;
-      min-height: 180px;
+      position: relative;
+      overflow: hidden;
     }
+    .feature:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(420px 220px at 30% 10%, rgba(24,198,210,.16), transparent 55%);
+      pointer-events:none;
+      opacity:.85;
+    }
+    .feature .inner{ position:relative; }
     .icon{
-      width: 44px; height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 14px;
       display:flex;
       align-items:center;
       justify-content:center;
-      background: linear-gradient(135deg, rgba(111,224,234,.22) 0%, rgba(18,159,178,.18) 100%);
-      border: 1px solid rgba(111,224,234,.22);
+      background: linear-gradient(135deg, rgba(24,198,210,.22) 0%, rgba(10,111,123,.18) 100%);
+      border: 1px solid rgba(24,198,210,.25);
       margin-bottom: 12px;
-      box-shadow: 0 14px 36px rgba(0,0,0,.30);
+      box-shadow: 0 12px 35px rgba(0,0,0,.25);
     }
     .icon svg{ width: 22px; height: 22px; opacity: .95; }
     .feature h3{ margin: 0 0 8px; font-size: 16px; letter-spacing:.2px; }
-    .feature p{ margin:0; color: var(--muted); line-height: 1.60; font-size: 14px; }
+    .feature p{ margin: 0; color: var(--muted); line-height: 1.6; font-size: 14px; }
 
-    /* Proceso */
-    .grid-steps{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
+    /* Process */
+    .grid-3.tight{ gap: 12px; }
     .step{
       padding: 20px;
-      min-height: 170px;
+      background: linear-gradient(180deg, rgba(0,0,0,.22) 0%, rgba(255,255,255,.03) 100%);
     }
-    .step .n{
+    .step .num{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       width: 38px; height: 38px;
-      border-radius: 999px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(242,251,255,.92);
       font-weight: 800;
+      color: var(--teal);
       margin-bottom: 10px;
     }
-    .step h3{ margin: 0 0 6px; font-size: 16px; }
-    .step p{ margin:0; color: var(--muted); line-height: 1.60; font-size: 14px; }
 
-    /* Misión / Visión / Valores */
+    /* Mission/Vision/Values */
     .mv-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    .mv p{ margin: 0; color: var(--muted); line-height: 1.65; }
+    .values{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .val{
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .val b{
+      display:block;
+      margin-bottom: 6px;
+      letter-spacing:.2px;
+    }
+    .val span{
+      display:block;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 13.5px;
+    }
+
+    .axes{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .axis{
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(24,198,210,.20);
+      background: linear-gradient(135deg, rgba(24,198,210,.10) 0%, rgba(0,0,0,.16) 100%);
+    }
+    .axis b{ display:block; margin-bottom: 6px; }
+    .axis span{ color: var(--muted); font-size: 13.5px; line-height: 1.55; }
+
+    /* Pricing */
+    .pricing-wrap{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .price-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .plan{
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(0,0,0,.22) 100%);
+    }
+    .plan:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(540px 260px at 30% 0%, rgba(24,198,210,.18), transparent 60%),
+        radial-gradient(420px 240px at 120% 70%, rgba(10,111,123,.22), transparent 60%);
+      pointer-events:none;
+      opacity:.95;
+    }
+    .plan .inner{ position:relative; padding: 22px; }
+
+    .plan .tag{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .plan h3{
+      margin: 14px 0 8px;
+      font-size: 20px;
+      letter-spacing:.2px;
+    }
+    .plan p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 14.5px;
+    }
+
+    /* “Pastilla” de precio estilo Canva (negro con texto blanco) */
+    .price-pill{
+      display:flex;
+      align-items: stretch;
+      gap: 10px;
+      margin: 14px 0 14px;
+    }
+    .limit{
+      flex: 1 1 auto;
+      padding: 14px 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      line-height: 1.2;
+    }
+    .limit b{ display:block; font-size: 18px; }
+    .limit span{ display:block; color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+    .price{
+      flex: 0 0 160px;
+      border-radius: 18px;
+      background: rgba(0,0,0,.72);
+      border: 1px solid rgba(255,255,255,.14);
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding: 12px 10px;
+    }
+    .price strong{ font-size: 28px; letter-spacing:.4px; }
+    .price small{
+      display:block;
+      font-size: 14px;
+      letter-spacing:.9px;
+      opacity:.95;
+      margin-top: 2px;
+    }
+
+    .bullets{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .bullets li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 13.8px;
+    }
+    .check{
+      width: 18px; height: 18px;
+      border-radius: 6px;
+      flex: 0 0 18px;
+      margin-top: 2px;
+      background: linear-gradient(135deg, rgba(24,198,210,.22) 0%, rgba(10,111,123,.22) 100%);
+      border: 1px solid rgba(24,198,210,.25);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .check svg{ width: 12px; height: 12px; opacity: .95; }
+
+    .plan .cta{
+      margin-top: 16px;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn.wide{ width: 100%; justify-content:center; }
+
+    /* Express */
+    .express{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
       gap: 14px;
       align-items: stretch;
     }
-    .mv .inner h3{ margin: 0 0 10px; font-size: 16px; }
-    .mv .inner p{ margin: 0; color: var(--muted); line-height: 1.65; font-size: 14px; }
+    .express .inner{ padding: 22px; }
+    .express h3{ margin: 0 0 8px; font-size: 20px; }
+    .express p{ margin: 0; color: var(--muted); line-height: 1.6; }
+    .express .price{
+      height: 100%;
+      min-height: 140px;
+    }
+    .express .price strong{ font-size: 30px; }
+    .express .price small{ letter-spacing: 1.0px; }
 
-    .values{
-      padding: 20px;
-    }
-    .values h3{ margin: 0 0 12px; font-size: 16px; }
-    .value-list{
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
-    }
-    .value-item{
-      padding: 12px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-    }
-    .value-item b{ display:block; font-size: 14px; margin-bottom: 3px; }
-    .value-item span{ display:block; color: var(--muted); font-size: 13px; line-height: 1.45; }
-
-    /* Precios */
-    .price-grid{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-    .price-card{
-      position: relative;
-      padding: 20px;
-      min-height: 230px;
-      overflow:hidden;
-    }
-    .price-card:before{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background:
-        radial-gradient(280px 160px at 20% 10%, rgba(111,224,234,.18), transparent 60%),
-        radial-gradient(240px 140px at 90% 20%, rgba(18,159,178,.15), transparent 62%);
-      pointer-events:none;
-    }
-    .price-card > *{ position: relative; z-index: 1; }
-
-    .plan{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-    .plan h3{
-      margin:0;
-      font-size: 18px;
-      letter-spacing:.2px;
-      text-transform: uppercase;
-    }
-    .plan .tag{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(242,251,255,.86);
-      font-size: 12px;
-      font-weight: 750;
-      white-space: nowrap;
-    }
-
-    .price-pill{
-      margin-top: 14px;
-      display:inline-flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap: 2px;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, rgba(7,16,21,.96) 0%, rgba(7,16,21,.88) 100%);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 18px 44px rgba(0,0,0,.45);
-    }
-    .price-pill strong{
-      font-size: 30px;
-      letter-spacing:.2px;
-      line-height: 1.05;
-    }
-    .price-pill span{
-      color: rgba(242,251,255,.72);
-      font-size: 12px;
-      font-weight: 650;
-      letter-spacing: .2px;
-      text-transform: uppercase;
-    }
-
-    .plan-desc{
-      margin: 8px 0 0;
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.55;
-    }
-    .plan-kits{
-      margin-top: 10px;
-      padding: 10px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-      color: rgba(242,251,255,.88);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-    .plan-kits b{ color: rgba(242,251,255,.95); }
-
-    /* Contacto + mapa */
+    /* Contact */
     .contact-grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
       align-items: stretch;
     }
+    .map{
+      min-height: 320px;
+      display:flex;
+      flex-direction: column;
+      overflow:hidden;
+    }
     .map iframe{
-      border: 0;
-      width: 100%;
-      height: 100%;
-      min-height: 340px;
+      border:0;
+      width:100%;
+      height:100%;
+      min-height: 360px;
       display:block;
-      filter: saturate(1.03) contrast(1.02);
+      filter: saturate(1.02) contrast(1.02);
     }
 
+    /* Footer */
     footer{
-      padding: 26px 0 36px;
+      padding: 22px 0 34px;
       border-top: 1px solid rgba(255,255,255,.10);
       color: var(--muted);
       font-size: 13px;
@@ -505,7 +565,7 @@
     .foot{
       display:flex;
       align-items:center;
-      justify-content:space-between;
+      justify-content: space-between;
       gap: 14px;
       flex-wrap: wrap;
     }
@@ -518,132 +578,155 @@
       z-index: 60;
       display:flex;
       align-items:center;
-      gap: 10px;
+      gap: 12px;
       padding: 12px 14px;
       border-radius: 999px;
-      background: rgba(37,211,102,.14);
-      border: 1px solid rgba(37,211,102,.40);
-      box-shadow: 0 18px 48px rgba(0,0,0,.50);
+      background: rgba(37, 211, 102, .14);
+      border: 1px solid rgba(37, 211, 102, .40);
+      box-shadow: 0 16px 40px rgba(0,0,0,.35);
       backdrop-filter: blur(10px);
       transition: .18s ease;
     }
     .wa-float:hover{ transform: translateY(-2px); }
-    .wa-b{
+    .wa-float .bubble{
       width: 40px; height: 40px;
       border-radius: 999px;
       display:flex; align-items:center; justify-content:center;
-      background: rgba(37,211,102,.22);
-      border: 1px solid rgba(37,211,102,.48);
+      background: rgba(37, 211, 102, .22);
+      border: 1px solid rgba(37, 211, 102, .52);
     }
-    .wa-float .txt{ display:flex; flex-direction:column; gap: 1px; }
-    .wa-float .txt b{ font-size: 14px; letter-spacing:.2px; }
-    .wa-float .txt span{ font-size: 12px; color: rgba(242,251,255,.78); font-weight: 650; }
+    .wa-float b{ display:block; font-size: 14px; letter-spacing:.2px; }
+    .wa-float span{ display:block; font-size: 12px; color: rgba(236,246,255,.80); margin-top: 2px; }
 
-    /* Reduce motion */
     @media (prefers-reduced-motion: reduce){
-      *{ transition:none !important; scroll-behavior:auto !important; }
-      .btn:hover, .wa-float:hover{ transform:none !important; }
+      *{ transition: none !important; scroll-behavior: auto !important; }
+      .btn:hover, .wa-float:hover{ transform: none !important; }
     }
 
-    /* Responsive */
     @media (max-width: 980px){
       .hero-grid{ grid-template-columns: 1fr; }
-      nav{ display:none; }
-      .menu-btn{ display:inline-flex; }
-      .nav{ flex-wrap: wrap; }
-      .nav-cta{ min-width: unset; width: 100%; justify-content:flex-start; }
-      .grid-3{ grid-template-columns: 1fr; }
-      .grid-steps{ grid-template-columns: 1fr; }
-      .mv-grid{ grid-template-columns: 1fr; }
       .price-grid{ grid-template-columns: 1fr; }
+      .mv-grid{ grid-template-columns: 1fr; }
       .contact-grid{ grid-template-columns: 1fr; }
-      .brand{ min-width: unset; }
+      .axes{ grid-template-columns: 1fr; }
+      .values{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+
+      nav{ display:none; }
+      .menu-btn{
+        display:inline-flex;
+        align-items:center;
+        gap:10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        border: 1px solid rgba(255,255,255,.14);
+        background: rgba(255,255,255,.06);
+        color: var(--text);
+        font-weight: 800;
+        font-size: 14px;
+        cursor:pointer;
+      }
+      .nav{
+        flex-wrap: wrap;
+      }
+      .nav-cta{ width: 100%; justify-content:flex-start; min-width: unset; }
+      .mobile-panel{
+        display:none;
+        width:100%;
+        padding: 8px 0 16px;
+      }
+      .mobile-panel.open{ display:block; }
+      .mobile-panel a{
+        display:block;
+        padding: 10px 12px;
+        border-radius: 12px;
+        color: var(--muted);
+      }
+      .mobile-panel a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
+      .express{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
-
   <header>
     <div class="container">
-      <div class="nav">
+      <div class="nav" id="inicio">
         <a class="brand" href="#inicio" aria-label="Ir al inicio">
-          <!-- Cambia el nombre del archivo a tu logo real -->
-          <img src="biosafe-pro-logo.png" alt="Logo BIOSAFE PRO" />
-          <div class="t">
-            <strong>BIOSAFE PRO</strong>
+          <!-- Cambia el src por tu logo real -->
+          <img src="TU_LOGO.png" alt="Logo BIOSAFE PRO" />
+          <div class="txt">
+            <b>BIOSAFE PRO</b>
             <span>Bioseguridad y Esterilización Profesional</span>
           </div>
         </a>
 
-        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">Menú</button>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menú</button>
 
         <nav aria-label="Navegación principal">
           <ul>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#proceso">Proceso</a></li>
-            <li><a href="#mv">Misión y valores</a></li>
+            <li><a href="#identidad">Misión y valores</a></li>
             <li><a href="#precios">Precios</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
 
         <div class="nav-cta">
-          <a class="btn primary" id="btnWhatsTop" target="_blank" rel="noopener">Contactar por WhatsApp</a>
-          <a class="btn" href="tel:+526644979797">Llamar</a>
+          <a class="btn teal" id="btnWhatsTop" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+          <a class="btn dark" href="tel:+526644979797">Llamar</a>
         </div>
-      </div>
 
-      <div class="menu-panel" id="menuPanel" aria-label="Menú móvil">
-        <a href="#servicios">Servicios</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#mv">Misión y valores</a>
-        <a href="#precios">Precios</a>
-        <a href="#contacto">Contacto</a>
+        <div class="mobile-panel" id="mobilePanel" aria-label="Menú móvil">
+          <a href="#servicios">Servicios</a>
+          <a href="#proceso">Proceso</a>
+          <a href="#identidad">Misión y valores</a>
+          <a href="#precios">Precios</a>
+          <a href="#contacto">Contacto</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <main id="contenido">
+  <main>
     <!-- HERO -->
-    <section class="hero" id="inicio">
+    <section class="hero">
       <div class="container">
         <div class="hero-grid">
           <div>
-            <div class="pill"><span class="dot"></span> Bioseguridad tercerizada para la industria estética</div>
+            <div class="pill"><span class="dot"></span> Servicio especializado en bioseguridad y esterilización instrumental</div>
 
             <h1>
-              Protegemos tu operación con <em>bioseguridad de grado hospitalario</em> y
-              <em>trazabilidad digital verificable</em>.
+              Protegemos tu práctica con <span class="em">protocolos confiables</span> de desinfección y esterilización.
             </h1>
 
             <p>
-              En BIOSAFE PRO diseñamos un esquema de esterilización instrumental para negocios de belleza y bienestar en Tijuana.
-              No es “solo limpieza”: es un proceso estandarizado, medible y documentable, pensado para reducir riesgo,
-              elevar confianza y sostener consistencia operativa.
+              En BIOSAFE PRO ofrecemos un esquema de esterilización instrumental diseñado para negocios de belleza y bienestar que exigen
+              control, consistencia y evidencia. Integramos procesos de bioseguridad de grado hospitalario con trazabilidad digital
+              verificable, para que tu equipo vuelva listo y tu operación se mantenga alineada a estándares claros.
             </p>
 
             <div class="hero-actions">
-              <a class="btn primary" id="btnWhatsHero" target="_blank" rel="noopener">Agendar o solicitar información</a>
-              <a class="btn" href="#precios">Ver precios</a>
+              <a class="btn teal" id="btnWhatsHero" target="_blank" rel="noopener">Agendar o solicitar información</a>
               <a class="btn" href="#servicios">Ver servicios</a>
+              <a class="btn" href="#precios">Ver precios</a>
             </div>
           </div>
 
-          <aside class="card quick">
+          <div class="card quick">
             <div class="inner">
               <h3>Información rápida</h3>
-              <p>Atendemos por WhatsApp, llamada o visita. Si lo prefieres, coordinamos recolección y entrega programada.</p>
+              <p>Atendemos por WhatsApp o llamada. Si lo prefieres, también puedes visitarnos en Plaza Las Ferias.</p>
 
               <div class="kv">
                 <div class="row">
                   <b>WhatsApp</b>
-                  <span><a id="waNumber1" target="_blank" rel="noopener">+52 664 497 9797</a></span>
+                  <span>+52 664 497 9797</span>
                 </div>
                 <div class="row">
                   <b>Dirección</b>
-                  <span>Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630, Col. Lomas Hipódromo, Tijuana, BC.</span>
+                  <span>Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630, Colonia Lomas Hipódromo, Tijuana, B.C.</span>
                 </div>
                 <div class="row">
                   <b>Horario</b>
@@ -652,12 +735,12 @@
               </div>
 
               <div class="mini-actions">
-                <a class="btn primary" id="btnWhatsQuick" target="_blank" rel="noopener">WhatsApp</a>
-                <a class="btn" id="btnMaps" target="_blank" rel="noopener">Abrir en Maps</a>
-                <a class="btn" href="tel:+526644979797">Llamar</a>
+                <a class="btn teal" id="btnWhatsCard" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn" id="btnMapsCard" target="_blank" rel="noopener">Abrir en Maps</a>
+                <a class="btn dark" href="tel:+526644979797">Llamar</a>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
@@ -665,59 +748,66 @@
     <!-- SERVICIOS -->
     <section id="servicios">
       <div class="container">
-        <div class="section-title">
+        <div class="section-head">
           <h2>Servicios</h2>
           <p>
-            Estructuramos un servicio diseñado para B2B: control de higiene, consistencia del proceso y evidencia verificable.
-            El objetivo es que tu equipo trabaje con certeza operativa y tu cliente perciba profesionalismo real.
+            Un modelo de atención creado para reducir riesgos asociados a instrumentos reutilizables, priorizando limpieza,
+            desinfección y esterilización con un enfoque práctico y profesional.
           </p>
         </div>
 
         <div class="grid-3">
-          <article class="card feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M7 3h10v6a5 5 0 0 1-10 0V3Z" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M9 21h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M12 16v5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-              </svg>
+          <div class="card feature">
+            <div class="inner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 12l3 3 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="2" opacity=".75"/>
+                </svg>
+              </div>
+              <h3>Esterilización profesional</h3>
+              <p>
+                Procesos orientados a disminuir la carga biológica en instrumental reutilizable, cuidando consistencia, control y
+                estandarización del servicio para tu operación diaria.
+              </p>
             </div>
-            <h3>Esterilización instrumental</h3>
-            <p>
-              Protocolo orientado a disminuir carga biológica en instrumental reutilizable,
-              con criterios claros de recepción, tratamiento y entrega para sostener un estándar repetible.
-            </p>
-          </article>
+          </div>
 
-          <article class="card feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3v6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M8 7h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M7 21h10l-1.5-9h-7L7 21Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-              </svg>
+          <div class="card feature">
+            <div class="inner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M7 7l-3 3 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17 7l3 3-3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 22v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h3>Desinfección y control higiénico</h3>
+              <p>
+                Preparación y tratamiento bajo criterios operativos claros, reduciendo el riesgo de contaminación cruzada y
+                elevando el estándar de higiene de tu práctica.
+              </p>
             </div>
-            <h3>Desinfección y control higiénico</h3>
-            <p>
-              Preparación y tratamiento de superficies e instrumentos con control previo y posterior,
-              reduciendo riesgo de contaminación cruzada en tu entorno de trabajo.
-            </p>
-          </article>
+          </div>
 
-          <article class="card feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M7 7h10v10H7V7Z" stroke="currentColor" stroke-width="1.7"/>
-                <path d="M9 11h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                <path d="M9 14h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-              </svg>
+          <div class="card feature">
+            <div class="inner">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M20 7l-8-4-8 4v10l8 4 8-4V7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M20 7l-8 5-8-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Gestión operativa y trazabilidad</h3>
+              <p>
+                Organización del servicio para sostener orden, control y evidencia verificable, fortaleciendo la confianza
+                del cliente final y la disciplina operativa del negocio.
+              </p>
             </div>
-            <h3>Gestión y trazabilidad</h3>
-            <p>
-              Organización del servicio para mantener orden, control y consistencia del proceso.
-              Enfoque en evidencia y verificabilidad para elevar confianza con tu cliente final.
-            </p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -725,49 +815,59 @@
     <!-- PROCESO -->
     <section id="proceso">
       <div class="container">
-        <div class="section-title">
+        <div class="section-head">
           <h2>Proceso de atención</h2>
-          <p>Un flujo simple y profesional: recibimos, tratamos y devolvemos el material listo para uso, con comunicación clara y tiempos acordados.</p>
+          <p>
+            Flujo simple y claro: coordinamos recepción, aplicamos el protocolo correspondiente y devolvemos el material listo para uso,
+            con comunicación directa y tiempos acordados.
+          </p>
         </div>
 
-        <div class="grid-steps">
-          <article class="card step">
-            <div class="n">1</div>
-            <h3>Recepción</h3>
-            <p>
-              Coordinamos por WhatsApp. Validamos tipo de material y acordamos modalidad de entrega/recepción.
-              Si aplica, definimos volumen (kits) y prioridad.
-            </p>
-          </article>
+        <div class="grid-3 tight">
+          <div class="card step">
+            <div class="inner">
+              <div class="num">1</div>
+              <h3>Recepción</h3>
+              <p>
+                Coordinamos por WhatsApp, validamos el tipo de material y acordamos entrega/recepción.
+                El objetivo es iniciar con información completa para evitar improvisaciones.
+              </p>
+            </div>
+          </div>
 
-          <article class="card step">
-            <div class="n">2</div>
-            <h3>Tratamiento</h3>
-            <p>
-              Aplicamos el protocolo correspondiente, priorizando rigor clínico, control y consistencia.
-              El foco es sostener un estándar repetible, no “una sola vez”.
-            </p>
-          </article>
+          <div class="card step">
+            <div class="inner">
+              <div class="num">2</div>
+              <h3>Tratamiento</h3>
+              <p>
+                Aplicamos el protocolo definido, priorizando rigor clínico, control y consistencia del proceso.
+                Mantenemos trazabilidad para respaldar lo que se entrega.
+              </p>
+            </div>
+          </div>
 
-          <article class="card step">
-            <div class="n">3</div>
-            <h3>Entrega</h3>
-            <p>
-              Entregamos el material listo para su uso y cerramos con confirmación de servicio.
-              Si eliges plan, se mantiene el esquema de recolección/entrega programada.
-            </p>
-          </article>
+          <div class="card step">
+            <div class="inner">
+              <div class="num">3</div>
+              <h3>Entrega</h3>
+              <p>
+                Entregamos el material listo para su uso, con comunicación clara sobre el servicio.
+                Si requieres logística programada, se define desde el primer contacto.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- MISION / VISION / VALORES -->
-    <section id="mv">
+    <!-- IDENTIDAD: MISIÓN / VISIÓN / VALORES -->
+    <section id="identidad">
       <div class="container">
-        <div class="section-title">
-          <h2>Misión, visión y valores</h2>
+        <div class="section-head">
+          <h2>Identidad: misión, visión y valores</h2>
           <p>
-            Nuestra propuesta no depende de “promesas”: se sostiene en proceso, evidencia y una relación B2B de largo plazo.
+            BIOSAFE PRO se concibe como un aliado B2B. No solo “hacemos esterilización”; sostenemos un estándar operativo
+            que protege tu reputación y reduce riesgos en tu servicio.
           </p>
         </div>
 
@@ -780,40 +880,56 @@
                 combinando tecnología de esterilización avanzada con trazabilidad digital verificable.
               </p>
 
-              <div style="height:14px"></div>
-
-              <h3>Visión</h3>
-              <p>
-                Ser el referente absoluto y el estándar de oro en bioseguridad tercerizada para la industria estética en la región fronteriza.
-              </p>
+              <div class="values">
+                <div class="val">
+                  <b>Rigor clínico innegociable</b>
+                  <span>Estándar alto, disciplina del proceso y foco en consistencia operativa.</span>
+                </div>
+                <div class="val">
+                  <b>Transparencia radical</b>
+                  <span>Evidencia, trazabilidad y verificabilidad como parte del servicio.</span>
+                </div>
+                <div class="val">
+                  <b>Mentalidad de aliado B2B</b>
+                  <span>Operamos para fortalecer tu negocio, no para complicarlo.</span>
+                </div>
+                <div class="val">
+                  <b>Innovación aplicada a la seguridad</b>
+                  <span>Tecnología y control puestos al servicio de la bioseguridad real.</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <aside class="card values">
-            <h3>Valores</h3>
-            <div class="value-list">
-              <div class="value-item">
-                <b>1. Rigor clínico innegociable</b>
-                <span>Representa el estándar clínico y la excelencia del proceso, sin atajos ni variaciones improvisadas.</span>
+          <div class="card mv">
+            <div class="inner">
+              <h3>Visión</h3>
+              <p>
+                Ser el referente absoluto y el estándar de oro en bioseguridad tercerizada para la industria estética
+                en la región fronteriza.
+              </p>
+
+              <div class="axes">
+                <div class="axis">
+                  <b>1) Rigor</b>
+                  <span>Representa el estándar clínico innegociable y la excelencia en el proceso.</span>
+                </div>
+                <div class="axis">
+                  <b>2) Transparencia</b>
+                  <span>Engloba la trazabilidad, la evidencia y la honestidad radical con el cliente.</span>
+                </div>
+                <div class="axis">
+                  <b>3) Alianza</b>
+                  <span>Define nuestro rol como socios estratégicos del negocio, más que simples proveedores.</span>
+                </div>
               </div>
-              <div class="value-item">
-                <b>2. Transparencia radical (verificabilidad)</b>
-                <span>Engloba trazabilidad, evidencia y comunicación directa: lo que se hace, se puede comprobar.</span>
-              </div>
-              <div class="value-item">
-                <b>3. Mentalidad de aliado B2B</b>
-                <span>No operamos como “proveedor externo”: actuamos como extensión estratégica de tu negocio.</span>
-              </div>
-              <div class="value-item">
-                <b>4. Innovación aplicada a la seguridad</b>
-                <span>Innovación con propósito: mejorar control, consistencia y seguridad real, no solo “tecnología por estética”.</span>
-              </div>
-              <div class="value-item">
-                <b>Alianza</b>
-                <span>Define nuestro rol como socios estratégicos para la continuidad y reputación del negocio del cliente.</span>
+
+              <div class="mini-actions" style="margin-top:16px;">
+                <a class="btn teal" href="#precios">Ver planes</a>
+                <a class="btn" href="#contacto">Ubicación y contacto</a>
               </div>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
@@ -821,92 +937,166 @@
     <!-- PRECIOS -->
     <section id="precios">
       <div class="container">
-        <div class="section-title">
-          <h2>Precios</h2>
+        <div class="section-head">
+          <h2>Planes y precios</h2>
           <p>
-            Planes mensuales para operación constante y una opción express para urgencias.
-            Si manejas volúmenes atípicos, se cotiza con base en kits y frecuencia.
+            Planes mensuales de esterilización instrumental con recolección y entrega programada. El objetivo es darte predictibilidad
+            y control operativo sin sacrificar bioseguridad.
           </p>
         </div>
 
-        <div class="price-grid">
-          <article class="card price-card">
-            <div class="plan">
-              <div>
-                <h3>ESENCIAL</h3>
-                <p class="plan-desc">Operación base para mantener ritmo y control sin fricción.</p>
+        <div class="pricing-wrap">
+          <div class="price-grid">
+            <!-- ESENCIAL -->
+            <div class="card plan">
+              <div class="inner">
+                <div class="tag"><span class="dot"></span> Plan mensual</div>
+                <h3>Esencial</h3>
+                <p>Ideal para operación estable con volumen controlado. Diseñado para mantener orden, higiene y consistencia.</p>
+
+                <div class="price-pill">
+                  <div class="limit">
+                    <b>Hasta 30 kits</b>
+                    <span>(bolsa kraft)</span>
+                  </div>
+                  <div class="price">
+                    <strong>$990</strong>
+                    <small>/MES</small>
+                  </div>
+                </div>
+
+                <ul class="bullets">
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Recepción, tratamiento y entrega con tiempos acordados.</li>
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Enfoque en bioseguridad y control higiénico.</li>
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Trazabilidad digital verificable (según esquema operativo).</li>
+                </ul>
+
+                <div class="cta">
+                  <a class="btn teal wide plan-btn" data-plan="Esencial" target="_blank" rel="noopener">Contratar por WhatsApp</a>
+                </div>
               </div>
-              <div class="tag">Plan mensual</div>
             </div>
 
-            <div class="plan-kits"><b>Hasta 30 kits</b> (bolsa kraft)</div>
+            <!-- PRO -->
+            <div class="card plan">
+              <div class="inner">
+                <div class="tag"><span class="dot"></span> Plan mensual</div>
+                <h3>Pro</h3>
+                <p>Para negocios con rotación constante que requieren capacidad adicional sin perder control ni evidencia.</p>
 
-            <div class="price-pill">
-              <strong>$990</strong>
-              <span>MXN / mes</span>
-            </div>
-          </article>
+                <div class="price-pill">
+                  <div class="limit">
+                    <b>Hasta 60 kits</b>
+                    <span>(bolsa kraft)</span>
+                  </div>
+                  <div class="price">
+                    <strong>$1,990</strong>
+                    <small>/MES</small>
+                  </div>
+                </div>
 
-          <article class="card price-card">
-            <div class="plan">
-              <div>
-                <h3>PRO</h3>
-                <p class="plan-desc">Para equipos con mayor rotación o varios turnos.</p>
+                <ul class="bullets">
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Capacidad ampliada para operación diaria intensa.</li>
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Protocolos consistentes con enfoque en reducción de riesgo.</li>
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Comunicación directa y seguimiento operativo.</li>
+                </ul>
+
+                <div class="cta">
+                  <a class="btn teal wide plan-btn" data-plan="Pro" target="_blank" rel="noopener">Contratar por WhatsApp</a>
+                </div>
               </div>
-              <div class="tag">Plan mensual</div>
             </div>
 
-            <div class="plan-kits"><b>Hasta 60 kits</b> (bolsa kraft)</div>
+            <!-- MASTER -->
+            <div class="card plan">
+              <div class="inner">
+                <div class="tag"><span class="dot"></span> Plan mensual</div>
+                <h3>Master</h3>
+                <p>Para clínicas o equipos con mayor volumen que buscan continuidad, orden y un estándar sostenido.</p>
 
-            <div class="price-pill">
-              <strong>$1,990</strong>
-              <span>MXN / mes</span>
-            </div>
-          </article>
+                <div class="price-pill">
+                  <div class="limit">
+                    <b>Hasta 120 kits</b>
+                    <span>(bolsa kraft)</span>
+                  </div>
+                  <div class="price">
+                    <strong>$2,990</strong>
+                    <small>/MES</small>
+                  </div>
+                </div>
 
-          <article class="card price-card">
-            <div class="plan">
-              <div>
-                <h3>MASTER</h3>
-                <p class="plan-desc">Para operación intensiva que requiere constancia y volumen.</p>
+                <ul class="bullets">
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Mayor cobertura para operación consolidada.</li>
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Rigor, transparencia y consistencia como estándar.</li>
+                  <li><span class="check" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>Soporte B2B orientado a eficiencia operativa.</li>
+                </ul>
+
+                <div class="cta">
+                  <a class="btn teal wide plan-btn" data-plan="Master" target="_blank" rel="noopener">Contratar por WhatsApp</a>
+                </div>
               </div>
-              <div class="tag">Plan mensual</div>
             </div>
+          </div>
 
-            <div class="plan-kits"><b>Hasta 120 kits</b> (bolsa kraft)</div>
+          <!-- EXPRESS -->
+          <div class="card express">
+            <div class="inner">
+              <h3>Express</h3>
+              <p>
+                Entrega en <b>24–48 horas</b>. Diseñado para urgencias reales, sin sacrificar control del proceso.
+                La disponibilidad depende del volumen y del horario de recepción.
+              </p>
 
-            <div class="price-pill">
-              <strong>$2,990</strong>
-              <span>MXN / mes</span>
-            </div>
-          </article>
+              <ul class="bullets" style="margin-top:14px;">
+                <li><span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>Prioridad operativa bajo capacidad disponible.</li>
+                <li><span class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>Confirmación de recepción y coordinación por WhatsApp.</li>
+              </ul>
 
-          <article class="card price-card">
-            <div class="plan">
-              <div>
-                <h3>EXPRESS</h3>
-                <p class="plan-desc">Prioridad por urgencia. Ideal para picos de trabajo.</p>
+              <div class="cta">
+                <a class="btn teal plan-btn" data-plan="Express" target="_blank" rel="noopener">Solicitar Express</a>
               </div>
-              <div class="tag">24–48 h</div>
             </div>
 
-            <div class="plan-kits"><b>Entrega 24–48 h</b> (según agenda)</div>
-
-            <div class="price-pill">
-              <strong>$60</strong>
-              <span>MXN por kit</span>
+            <div class="inner" style="display:flex; align-items:stretch;">
+              <div class="price" style="width:100%;">
+                <strong>$60</strong>
+                <small>POR KIT</small>
+              </div>
             </div>
-          </article>
-        </div>
+          </div>
 
-        <div style="height:14px"></div>
-
-        <div class="card">
-          <div class="inner">
-            <b style="display:block; font-size:14px; margin-bottom:6px;">Nota operativa</b>
-            <div style="color: var(--muted); font-size:14px; line-height:1.6;">
-              Para garantizar consistencia, el servicio se programa por volumen (kits) y frecuencia. Si tu operación requiere un esquema
-              especial (p. ej., múltiples sucursales o recolecciones en días fijos), lo armamos en modalidad B2B.
+          <div class="card">
+            <div class="inner" style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;">
+              <div style="max-width:75ch;">
+                <b style="display:block; margin-bottom:6px;">¿No estás seguro de qué plan elegir?</b>
+                <span style="color: var(--muted); line-height:1.55;">
+                  Te recomendamos definir tu volumen semanal (kits promedio) y el ritmo de rotación del equipo. Con esa información,
+                  te orientamos al plan que mantenga bioseguridad sin sobrecostos.
+                </span>
+              </div>
+              <a class="btn teal" id="btnWhatsPricing" target="_blank" rel="noopener">Ayúdame a elegir un plan</a>
             </div>
           </div>
         </div>
@@ -916,24 +1106,28 @@
     <!-- CONTACTO -->
     <section id="contacto">
       <div class="container">
-        <div class="section-title">
+        <div class="section-head">
           <h2>Contacto</h2>
-          <p>Si quieres que tu bioseguridad sea verificable y constante, conversemos. Respondemos rápido por WhatsApp.</p>
+          <p>Agenda por WhatsApp o visita el punto de atención. Si necesitas indicaciones, abre la ubicación en Maps.</p>
         </div>
 
         <div class="contact-grid">
           <div class="card">
             <div class="inner">
-              <h3 style="margin:0 0 10px; font-size:16px;">Atención y ubicación</h3>
+              <h3 style="margin-top:0;">Datos de contacto</h3>
 
               <div class="kv">
                 <div class="row">
                   <b>WhatsApp</b>
-                  <span><a id="waNumber2" target="_blank" rel="noopener">+52 664 497 9797</a></span>
+                  <span>+52 664 497 9797</span>
+                </div>
+                <div class="row">
+                  <b>Teléfono</b>
+                  <span><a href="tel:+526644979797" style="text-decoration:underline; text-underline-offset:3px;">+52 664 497 9797</a></span>
                 </div>
                 <div class="row">
                   <b>Dirección</b>
-                  <span>Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630, Col. Lomas Hipódromo, Tijuana, BC.</span>
+                  <span>Local #14 Centro Comercial Plaza Las Ferias, avenida de Las Ferias 5630, Colonia Lomas Hipódromo, Tijuana, B.C.</span>
                 </div>
                 <div class="row">
                   <b>Horario</b>
@@ -942,103 +1136,121 @@
               </div>
 
               <div class="mini-actions">
-                <a class="btn primary" id="btnWhatsContact" target="_blank" rel="noopener">WhatsApp</a>
-                <a class="btn" id="btnMaps2" target="_blank" rel="noopener">Abrir en Maps</a>
-                <a class="btn" href="tel:+526644979797">Llamar</a>
+                <a class="btn teal" id="btnWhatsBottom" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn" id="btnMapsBottom" target="_blank" rel="noopener">Abrir en Maps</a>
+                <a class="btn dark" href="tel:+526644979797">Llamar</a>
               </div>
             </div>
           </div>
 
           <div class="card map" aria-label="Mapa">
-            <!-- Reemplaza el src con tu link exacto de Google Maps embed si ya lo tienes -->
             <iframe
-              title="Ubicación BIOSAFE PRO"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Plaza%20Las%20Ferias%20Tijuana&output=embed">
+              src="https://www.google.com/maps?q=Plaza%20Las%20Ferias%20Tijuana%20local%2014&output=embed">
             </iframe>
           </div>
         </div>
       </div>
     </section>
-
-    <footer>
-      <div class="container">
-        <div class="foot">
-          <div>© <span id="year"></span> BIOSAFE PRO. Bioseguridad y Esterilización Profesional.</div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn" href="#precios">Precios</a>
-            <a class="btn" href="#contacto">Contacto</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- WhatsApp flotante -->
-    <a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Abrir chat de WhatsApp">
-      <span class="wa-b" aria-hidden="true">
-        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
-          <path d="M16 3C9.4 3 4 8.2 4 14.6c0 2.3.7 4.4 1.9 6.2L4 29l8.4-1.9c1.7.9 3.6 1.4 5.6 1.4 6.6 0 12-5.2 12-11.6C30 8.2 22.6 3 16 3Z" fill="rgba(37,211,102,.20)" stroke="rgba(242,251,255,.80)" stroke-width="1.2"/>
-          <path d="M12.9 10.9c-.3-.7-.6-.7-.9-.7h-.8c-.2 0-.6.1-.9.5-.3.4-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.7 5.9 5.1 2.9 1.1 3.5.9 4.1.8.6-.1 2-1 2.3-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.7-.5s-2-1-2.3-1.1c-.3-.1-.6-.1-.9.3-.3.4-1 1.1-1.3 1.3-.2.2-.4.2-.8.1-.4-.2-1.5-.6-2.8-1.7-1-.8-1.7-1.9-1.9-2.3-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.3-.4.4-.6.1-.2 0-.5-.1-.7-.1-.2-.9-2.1-1.2-2.8Z"
-                fill="rgba(242,251,255,.88)"/>
-        </svg>
-      </span>
-      <span class="txt">
-        <b>WhatsApp</b>
-        <span>+52 664 497 9797</span>
-      </span>
-    </a>
   </main>
 
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <div>
+          <b style="color:var(--text);">BIOSAFE PRO</b><br/>
+          <span>Bioseguridad y Esterilización Profesional</span>
+        </div>
+        <div>
+          <span>© <span id="year"></span> BIOSAFE PRO. Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating -->
+  <a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <span class="bubble" aria-hidden="true">
+      <!-- WhatsApp icon -->
+      <svg viewBox="0 0 32 32" width="20" height="20" fill="none">
+        <path d="M27.4 15.2c0 6.2-5 11.2-11.2 11.2-1.9 0-3.6-.5-5.2-1.3L6 26l1.6-4.8c-.9-1.6-1.4-3.4-1.4-5.3C6.2 9 11.2 4 17.4 4s10 5 10 11.2z" stroke="white" stroke-width="1.6" opacity=".9"/>
+        <path d="M13.7 11.2c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3.1 4.9 4.2 2.4.9 2.9.7 3.4.6.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.1-1.3-.1-.2-.4-.3-.8-.5-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2-.2.4-1 1.1-1.2 1.3-.2.2-.4.2-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.6.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.6-1.6-.8-2z" fill="white" opacity=".95"/>
+      </svg>
+    </span>
+    <div>
+      <b>WhatsApp</b>
+      <span>+52 664 497 9797</span>
+    </div>
+  </a>
+
   <script>
-    // === Configuración (edita si cambias número o link) ===
+    // Datos
     const PHONE_E164 = "526644979797"; // +52 664 497 9797
-    const WA_TEXT = encodeURIComponent(
-      "Hola, soy [NOMBRE]. Me interesa el servicio de esterilización instrumental. ¿Me compartes disponibilidad, modalidad de entrega/recolección y el plan recomendado según mi volumen de kits?"
-    );
+    const WHATSAPP_BASE = "https://wa.me/" + PHONE_E164;
+    const MAPS_LINK = "https://www.google.com/maps?q=Plaza%20Las%20Ferias%20Tijuana%20local%2014";
 
-    // Si ya tienes un link exacto de tu ubicación, pega aquí tu URL de Google Maps (no embed)
-    const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Plaza%20Las%20Ferias%20Tijuana";
-
-    // Links WhatsApp
-    const waLink = `https://wa.me/${PHONE_E164}?text=${WA_TEXT}`;
-
-    // Top buttons
-    document.getElementById("btnWhatsTop").href = waLink;
-    document.getElementById("btnWhatsHero").href = waLink;
-    document.getElementById("btnWhatsQuick").href = waLink;
-    document.getElementById("btnWhatsContact").href = waLink;
-    document.getElementById("waFloat").href = waLink;
-
-    // WA number links
-    document.getElementById("waNumber1").href = waLink;
-    document.getElementById("waNumber2").href = waLink;
-
-    // Maps
-    document.getElementById("btnMaps").href = MAPS_URL;
-    document.getElementById("btnMaps2").href = MAPS_URL;
-
-    // Año
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu
-    const menuBtn = document.getElementById("menuBtn");
-    const menuPanel = document.getElementById("menuPanel");
-
-    function setMenu(open){
-      menuPanel.classList.toggle("open", open);
-      menuBtn.setAttribute("aria-expanded", String(open));
+    // Utilidad: mensaje prellenado según origen/plan
+    function waLink(message){
+      const txt = encodeURIComponent(message);
+      return WHATSAPP_BASE + "?text=" + txt;
     }
 
-    menuBtn.addEventListener("click", () => {
-      const isOpen = menuPanel.classList.contains("open");
-      setMenu(!isOpen);
+    // Botones generales
+    const msgGeneral =
+      "Hola, soy [NOMBRE]. Me interesa el servicio de esterilización instrumental. ¿Me compartes disponibilidad, logística de recolección/entrega y cómo manejan la trazabilidad?";
+
+    const btnWhatsTop = document.getElementById("btnWhatsTop");
+    const btnWhatsHero = document.getElementById("btnWhatsHero");
+    const btnWhatsCard = document.getElementById("btnWhatsCard");
+    const btnWhatsBottom = document.getElementById("btnWhatsBottom");
+    const btnWhatsPricing = document.getElementById("btnWhatsPricing");
+    const waFloat = document.getElementById("waFloat");
+
+    [btnWhatsTop, btnWhatsHero, btnWhatsCard, btnWhatsBottom, btnWhatsPricing, waFloat].forEach(el => {
+      if(!el) return;
+      el.href = waLink(msgGeneral);
     });
 
-    // Cierra menú al navegar
-    menuPanel.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => setMenu(false));
+    // Maps
+    const btnMapsCard = document.getElementById("btnMapsCard");
+    const btnMapsBottom = document.getElementById("btnMapsBottom");
+    [btnMapsCard, btnMapsBottom].forEach(el => {
+      if(!el) return;
+      el.href = MAPS_LINK;
     });
+
+    // Botones por plan
+    document.querySelectorAll(".plan-btn").forEach(btn => {
+      const plan = btn.getAttribute("data-plan") || "Plan";
+      let msg = `Hola, me interesa el plan ${plan} de BIOSAFE PRO. ¿Me confirmas disponibilidad, qué incluye, tiempos y cómo funciona la trazabilidad?`;
+      if(plan.toLowerCase() === "express"){
+        msg = "Hola, necesito servicio Express (24–48h). ¿Puedo coordinar recepción hoy? ¿Qué horario y condiciones aplican? También requiero info de trazabilidad.";
+      }
+      btn.href = waLink(msg);
+    });
+
+    // Menú móvil
+    const menuBtn = document.getElementById("menuBtn");
+    const mobilePanel = document.getElementById("mobilePanel");
+    if(menuBtn && mobilePanel){
+      menuBtn.addEventListener("click", () => {
+        const open = mobilePanel.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      // Cierra menú al dar click
+      mobilePanel.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          mobilePanel.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Año footer
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
